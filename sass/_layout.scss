@@ -1,0 +1,31 @@
+.container {
+  padding: 5rem 6.5rem;
+}
+.row {
+  display: flex;
+  &:not(:last-child) {
+    margin-bottom: var(--vertical-gutter);
+  }
+}
+.col {
+  background-color: var(--color-white);
+  flex: 1;
+  &:not(:last-child) {
+    margin-right: var(--horizontal-gutter);
+  }
+
+  &:hover .product .product__atc {
+    opacity: 1;
+  }
+  &:hover .product .product__img {
+    filter: blur(2px) brightness(80%);
+  }
+}
+
+.footer {
+  font-weight: 400;
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--color-mute);
+}

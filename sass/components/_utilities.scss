@@ -1,0 +1,22 @@
+.btn {
+  &:link,
+  &:visited {
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-flashy-2);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--color-white) !important;
+  }
+  &:hover {
+    background-color: var(--color-flashy-1) !important;
+  }
+  &-cart {
+    text-align: center;
+    width: 50%;
+    align-self: center;
+  }
+}

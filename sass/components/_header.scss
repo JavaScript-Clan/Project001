@@ -1,0 +1,115 @@
+.header {
+  // padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-flashy-1);
+  &-main {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: lobster;
+    font-weight: 300;
+    flex: 1;
+    letter-spacing: 4px;
+  }
+
+  &-sub {
+    font-size: 2.2rem;
+  }
+}
+
+.nav {
+  &__list {
+    padding: 0 4rem;
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+    .nav__badge {
+      font-weight: 600;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      right: 1rem;
+      top: 1.2rem;
+      padding: 1px 5px;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background-color: var(--color-red);
+      z-index: 20;
+
+      &--notif {
+        right: 1.2rem;
+      }
+    }
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.nav-preview {
+  position: fixed;
+  z-index: 100;
+  top: 7rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  & > * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30rem;
+    height: auto;
+    background-color: var(--color-white);
+    border-radius: 3px;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+.cart-preview {
+  a:link,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  a:hover {
+    background-color: var(--color-primary);
+  }
+  right: 15rem;
+  padding-bottom: 1.3rem;
+  display: none;
+  flex-direction: column;
+}
+
+.notification-preview {
+  right: 9.5rem;
+  height: 37.5rem;
+  display: none;
+}
+
+.account-preview {
+  padding-bottom: 1.5rem;
+  right: 3rem;
+  display: none;
+  flex-direction: column;
+  & > * {
+    padding: 1.3rem;
+    &:not(:last-child) {
+      border-bottom: var(--line);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "truimph-and-bj-store",
+  "version": "1.0.0",
+  "description": "...simulation of an E-commerce site",
+  "main": "index.js",
+  "scripts": {
+    "track:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Triumph and BJ",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
