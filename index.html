@@ -194,6 +194,14 @@
     <footer class="footer">
         &copy; Copyright Triumph and BJ stores, 2021
     </footer>
+    <script>
+        var product__atcs = document.querySelectorAll('.product__atc');
+        product__atcs.forEach(product__atc => {
+            this.addEventListener('click', () => {
+                this.window.location = "Cart";
+            })
+        });
+    </script>
 </body>
 
 </html>
