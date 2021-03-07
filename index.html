@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script defer type="module" src="./script/controller.js"></script>
@@ -24,7 +24,7 @@
                 <li class="nav__item nav__item--cart">
                     <span class="nav__badge">3</span>
                     <svg class="nav__icon">
-                        <use href="./image/sprite.svg#icon-cart"></use>
+                        <use xlink:href="./image/sprite.svg#icon-cart"></use>
                     </svg>
                 </li>
                 <li class="nav__item nav__item--notif">
@@ -79,7 +79,7 @@
                 <img src="image/user.jpg" alt="TBS user" class="account__img">
                 <figcaption class="account__desc">
                     <span class="account__name">Jasmine Harvey</span>
-                    <span class="account__email">jasharvey@demo.com</span> 
+                    <span class="account__email">jasharvey@demo.com</span>
                 </figcaption>
             </figure>
             <p class="account__info">
@@ -194,6 +194,7 @@
     <footer class="footer">
         &copy; Copyright Triumph and BJ stores, 2021
     </footer>
+
     <script>
         var product__atcs = document.querySelectorAll('.product__atc');
         product__atcs.forEach(product__atc => {
