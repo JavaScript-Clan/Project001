@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/cart.css">
     <link rel="stylesheet" href="./css/style.css">
     <script defer type="module" src="./script/controller.js"></script>
     <title>Triumph and BJ e-store | Online shopping</title>
@@ -15,8 +16,10 @@
 
 <body>
     <header class="header">
-
-        <h1 class="header-main">Triumph and BJ
+        <svg class="nav__icon nav__icon--menu">
+            <use xlink:href="./image/sprite.svg#icon-menu"></use>
+        </svg>
+        <h1 class="header-main">Triumph and BJ 
             <span class="header-sub">e-Store</span>
         </h1>
         <nav class="nav">
@@ -24,18 +27,18 @@
                 <li class="nav__item nav__item--cart">
                     <span class="nav__badge">3</span>
                     <svg class="nav__icon">
-                        <use href="./image/sprite.svg#icon-cart"></use>
+                        <use xlink:href="./image/sprite.svg#icon-cart"></use>
                     </svg>
                 </li>
                 <li class="nav__item nav__item--notif">
-                    <span class="nav__badge nav__badge--notif">8</span>
+                    <span class="nav__badge nav__badge--notif">3</span>
                     <svg class="nav__icon">
-                        <use href="./image/sprite.svg#icon-bell"></use>
+                        <use xlink:href="./image/sprite.svg#icon-bell"></use>
                     </svg>
                 </li>
                 <li class="nav__item nav__item--user">
                     <svg class="nav__icon">
-                        <use href="./image/sprite.svg#icon-user-check"></use>
+                        <use xlink:href="./image/sprite.svg#icon-user-check"></use>
                     </svg>
                 </li>
             </ul>
@@ -43,7 +46,7 @@
     </header>
     <nav class="nav-preview">
         <div data-popup="cart" class="cart-preview">
-            <a href="#">
+            <a href="#/Imose universal 4G LTE MiFi">
                 <figure class="cart">
                     <img src="image/Wifi_2.jpg" alt="TBS cart product" class="cart__product">
                     <figcaption class="cart__desc">
@@ -52,7 +55,7 @@
                     </figcaption>
                 </figure>
             </a>
-            <a href="#">
+            <a href="#/Ntel 4G LTE MiFi Mobile Hotspot">
                 <figure class="cart">
                     <img src="image/Wifi_16.jpg" alt="TBS cart product" class="cart__product">
                     <figcaption class="cart__desc">
@@ -61,7 +64,7 @@
                     </figcaption>
                 </figure>
             </a>
-            <a href="#">
+            <a href="#/ZTE LTE MiFi">
                 <figure class="cart">
                     <img src="image/Wifi_21.jpg" alt="TBS cart product" class="cart__product">
                     <figcaption class="cart__desc">
@@ -71,9 +74,15 @@
                 </figure>
             </a>
             <p class="cart__total">Total: £57.57</p>
-            <a href="#" class="btn btn-cart">View cart</a>
+            <a href="#/cart" class="btn btn-cart">View cart</a>
         </div>
-        <div data-popup="notif" class="notification-preview">Notification Preview</div>
+        <div data-popup="notif" class="notification-preview">
+            <h3 class="notification-heading">Notifications</h3>
+            <p class="notification-msg">Get up to 50% OFF Ntel 4G LTE MiFi Mobile Hotspot TODAY ONLY!</p>
+            <p class="notification-msg">24-Hour Flash Sale! Starting 12 noon!</p>
+            <p class="notification-msg">Enjoy FREE SHIPPING on orders over £29.</p>
+            <!-- <p class="notification-msg notification-nonotif">No notifications.</p> -->
+        </div>
         <div data-popup="user" class="account-preview">
             <figure class="account">
                 <img src="image/user.jpg" alt="TBS user" class="account__img">
@@ -83,7 +92,7 @@
                 </figcaption>
             </figure>
             <p class="account__info">
-                Notification <span class="account__badge">8</span>
+                Notification <span class="account__badge">3</span>
             </p>
             <p class="account__info">
                 Cart <span class="account__badge">3</span>
@@ -91,14 +100,35 @@
         </div>
     </nav>
 
+    <section class="side-nav">
+        <figure class="account">
+            <img src="image/user.jpg" alt="TBS user" class="account__img">
+            <figcaption class="account__desc">
+                <span class="account__name">Jasmine Harvey</span>
+                <span class="account__email">jasharvey@demo.com</span> 
+            </figcaption>
+        </figure>
+
+        <div class="side-nav__notif">
+            <h3 class="nav-heading">Notifications <span class="account__badge">3</span></h3>
+            <p class="nav-msg">Get up to 50% OFF Ntel 4G LTE MiFi Mobile Hotspot TODAY ONLY!</p>
+            <p class="nav-msg">24-Hour Flash Sale! Starting 12 noon!</p>
+            <p class="nav-msg">Enjoy FREE SHIPPING on orders over £29.</p>
+            <!-- <p class="notification-msg notification-nonotif">No notifications.</p> -->
+        </div>
+
+        <span class="side-nav__close">&times;</span>
+    </section>
+    <div class="overlay"></div>
+
     <main class="container">
-        <div class="row">
+        <div class="line">
             <div class="col">
                 <figure class="product">
                     <img src="image/Wifi_10.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">MiFi</span>
                     <span class="product__price">£15.99</span>
                 </figcaption>
@@ -108,7 +138,7 @@
                     <img src="image/Wifi_13.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">MiFi</span>
                     <span class="product__price">£15.99</span>
                 </figcaption>
@@ -118,20 +148,20 @@
                     <img src="image/Wifi_14.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">MiFi</span>
                     <span class="product__price">£15.99</span>
                 </figcaption>
             </div>
         </div>
 
-        <div class="row">
+        <div class="line">
             <div class="col">
                 <figure class="product">
                     <img src="image/Wifi_16.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">Ntel 4G LTE MiFi Mobile Hotspot</span>
                     <span class="product__price">£10.99</span>
                 </figcaption>
@@ -141,7 +171,7 @@
                     <img src="image/Wifi_17.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">MiFi</span>
                     <span class="product__price">£15.99</span>
                 </figcaption>
@@ -151,20 +181,20 @@
                     <img src="image/Wifi_18.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">MiFi</span>
                     <span class="product__price">£15.99</span>
                 </figcaption>
             </div>
         </div>
 
-        <div class="row">
+        <div class="line">
             <div class="col">
                 <figure class="product">
                     <img src="image/Wifi_19.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">MiFi</span>
                     <span class="product__price">£15.99</span>
                 </figcaption>
@@ -174,7 +204,7 @@
                     <img src="image/Wifi_21.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">ZTE LTE MiFi – Unlock MiFi for all devices</span>
                     <span class="product__price">£30.59</span>
                 </figcaption>
@@ -184,16 +214,49 @@
                     <img src="image/Wifi_23.jpg" alt="TBS product" class="product__img">
                     <span class="product__atc">Add to cart</span>
                 </figure>
-                <figcaption class="product__desc">
+                <figcaption class="product__des">
                     <span class="product__name">MiFi</span>
                     <span class="product__price">£15.99</span>
                 </figcaption>
             </div>
         </div>
     </main>
+    <section class="section-cart">
+    </section>
     <footer class="footer">
-        &copy; Copyright Triumph and BJ stores, 2021
+        &copy; Copyright Triumph and BJ stores, 2021 &nbsp;|&nbsp; All rights reserved.
     </footer>
+    
+    <script>
+            let nextbtn = document.querySelectorAll('.btn-next');
+            let sectionsheader = document.querySelectorAll('.sections__header li');
+            nextbtn.forEach(nextbtn__each => {
+                nextbtn__each.addEventListener('click', next);
+            });
+
+            function next(e) {
+                e.preventDefault();
+                let thispage = this.parentElement.parentElement.parentElement;
+                thispage.classList.remove('active');
+                thispage.nextElementSibling.classList.add('active');
+
+                sectionsheader.forEach(sectionsheader__each => {
+
+                    let sectionid = thispage.nextElementSibling.getAttribute('id');
+                    let activelist = sectionsheader__each.getAttribute('data-preview');
+
+                    if (sectionid == activelist) {
+                        sectionsheader__each.classList.add('active');
+                        sectionsheader__each.previousElementSibling.classList.remove('active');
+                        console.log("Wroks");
+                    }
+
+                });
+
+            }
+        </script>
+
+
 </body>
 
 </html>

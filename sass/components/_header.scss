@@ -1,10 +1,23 @@
 .header {
-  // padding: 2rem 0;
   display: flex;
   align-items: center;
   background-color: var(--color-flashy-1);
   &-main {
     padding: 2rem 0;
+    -webkit-text-stroke: 1px var(--color-secondary);
+    -webkit-text-fill-color: transparent;
+    color: var(--color-secondary);
+    @media only screen and (max-width: 37.5em) {
+      padding: 2rem;
+      padding-right: 0;
+      text-align: left;
+    }
+    @media only screen and (max-width: 31.25em) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: 21.875em) {
+      font-size: 1.5rem;
+    }
     text-align: center;
     font-size: 3rem;
     font-family: lobster;
@@ -15,14 +28,23 @@
 
   &-sub {
     font-size: 2.2rem;
+    @media only screen and (max-width: 31.25em) {
+      font-size: 1.2rem;
+    }
   }
 }
 
 .nav {
+  align-self: stretch;
   &__list {
     padding: 0 4rem;
+    @media only screen and (max-width: 37.5em) {
+      padding: 0 1rem;
+    }
     display: flex;
     list-style: none;
+    height: 100%;
+    align-items: center;
   }
 
   &__item {
@@ -30,6 +52,19 @@
     position: relative;
     z-index: 10;
     cursor: pointer;
+
+    &--notif {
+      @media only screen and (max-width: 37.5em) {
+        display: none;
+      }
+    }
+
+    &--user {
+      @media only screen and (max-width: 37.5em) {
+        display: none;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: 0.5rem;
     }
@@ -46,6 +81,9 @@
       border-radius: 50%;
       background-color: var(--color-red);
       z-index: 20;
+      @media only screen and (max-width: 56.25em) {
+        padding: 1px 3.5px;
+      }
 
       &--notif {
         right: 1.2rem;
@@ -56,14 +94,26 @@
   &__icon {
     width: 2.5rem;
     height: 2.5rem;
+    stroke-width: 0;
+    stroke: var(--color-secondary);
+    fill: var(--color-secondary);
+
+    &--menu {
+      cursor: pointer;
+      display: none;
+      margin-left: 2rem;
+      @media only screen and (max-width: 37.5em) {
+        display: block;
+      }
+    }
   }
 }
 
 .nav-preview {
   position: fixed;
   z-index: 100;
-  top: 7rem;
-  display: flex;
+  top: 7.4rem;
+  display: inline-flex;
   justify-content: flex-end;
   width: 100%;
 
@@ -73,9 +123,11 @@
     right: 0;
     width: 30rem;
     height: auto;
+    padding-bottom: 1.5rem;
     background-color: var(--color-white);
     border-radius: 3px;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    // z-index: 1500;
   }
 }
 
@@ -90,19 +142,26 @@
     background-color: var(--color-primary);
   }
   right: 15rem;
-  padding-bottom: 1.3rem;
   display: none;
   flex-direction: column;
+  @media only screen and (max-width: 37.5em) {
+    right: 2.5rem;
+  }
 }
 
 .notification-preview {
-  right: 9.5rem;
-  height: 37.5rem;
   display: none;
+  right: 9.5rem;
+  flex-direction: column;
+  & > * {
+    padding: 1.3rem;
+    &:not(:last-child) {
+      border-bottom: var(--line);
+    }
+  }
 }
 
 .account-preview {
-  padding-bottom: 1.5rem;
   right: 3rem;
   display: none;
   flex-direction: column;
