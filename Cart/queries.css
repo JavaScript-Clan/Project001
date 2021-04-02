@@ -1,0 +1,394 @@
+                /*----------------------------------------------*/
+                /*----------------------For small phone screens-----------------*/
+                /*----------------------------------------------*/
+                
+                @media only screen and (max-width: 480px) {
+                    html {
+                        font-size: 7px;
+                        width: 105%;
+                        overflow-x: hidden;
+                    }
+                    body {
+                        overflow-x: hidden;
+                    }
+                    /*----------------------------------------------*/
+                    /*---------- Reusable elements -----------------*/
+                    /*----------------------------------------------*/
+                    section {
+                        margin-top: 1em;
+                    }
+                    /*-------------------------------------------------*/
+                    /*------------Main navigation--------------*/
+                    /*--------------------------------------------------*/
+                    .nav__item {
+                        display: none;
+                    }
+                    .nav__item--user {
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                    }
+                    /*-------------------------------------------------*/
+                    /*------------End of Main navigation--------------*/
+                    /*--------------------------------------------------*/
+                    /*-------------------------------------------------*/
+                    /*------------Main navigation Preview--------------*/
+                    /*--------------------------------------------------*/
+                    .account-preview {
+                        right: 5em;
+                    }
+                    .account__badge {
+                        height: auto;
+                        font-weight: 100;
+                    }
+                    /*-------------------------------------------------*/
+                    /*------------End of Main navigation Preview--------------*/
+                    /*--------------------------------------------------*/
+                    /*----------------------------------------------*/
+                    /*-----------------Content navigation ------------------*/
+                    /*----------------------------------------------*/
+                    main nav {
+                        padding-bottom: 1.7em;
+                    }
+                    main nav ol::after {
+                        width: 115%;
+                        left: -3em;
+                        opacity: 0;
+                    }
+                    ol li.active::after {
+                        left: -2em;
+                        width: 104%;
+                    }
+                    ol li:last-of-type.active::after {
+                        left: -1em;
+                        width: 115%;
+                    }
+                    ol li:first-of-type.active::after {
+                        left: -3.3em;
+                        width: 115%;
+                    }
+                    /*----------------------------------------------*/
+                    /*-----------------End of Content navigation ------------------*/
+                    /*----------------------------------------------*/
+                    /*----------------------------------------------*/
+                    /*----------------------------------------------*/
+                    /*---------------First container ---------------*/
+                    /*----------------------------------------------*/
+                    .container__main__title {
+                        margin-bottom: 0.4em;
+                    }
+                    .container {
+                        flex-direction: column-reverse;
+                    }
+                    .container:first-of-type {
+                        padding: 2em 0.5em;
+                        margin: 0;
+                    }
+                    .container:first-of-type.active {
+                        display: block;
+                    }
+                    img {
+                        width: 46%;
+                    }
+                    .cart__products figcaption {
+                        padding-left: 3em;
+                    }
+                    .cart__products figcaption span:nth-child(2n) {
+                        line-height: 1.8em;
+                    }
+                    .product__no {
+                        height: 100%;
+                        padding-top: 8em;
+                    }
+                    .product__no input {
+                        padding: 0 0 0 0.7em;
+                        border: 0;
+                        margin-bottom: 0;
+                    }
+                    .container__sub {
+                        width: 90%;
+                        margin: auto;
+                        margin-top: 4em;
+                    }
+                    .container__sub .container--title,
+                    .container__sub--container {
+                        width: 100%;
+                        padding-left: 0.3em;
+                    }
+                    .container__sub--container h4 {
+                        flex-basis: 50%;
+                        font-size: 1.5em;
+                        line-height: 3em;
+                    }
+                    .btn__container {
+                        margin-bottom: 3em;
+                    }
+                    /*----------------------------------------------*/
+                    /*----------------------------------------------*/
+                    /*---------------Second container ---------------*/
+                    /*----------------------------------------------*/
+                    section:nth-of-type(2n) .container__sub,
+                    section:last-of-type .container__sub {
+                        margin-top: 0;
+                        width: 96%;
+                    }
+                    .container__main__content .half-row {
+                        flex-direction: column;
+                        width: 100%;
+                        margin: auto;
+                    }
+                    .address {
+                        width: 92.7%;
+                    }
+                    .product__shipping__desc .half-row input {
+                        margin-left: 0.5em;
+                    }
+                    .product__shipping__desc .half-row {
+                        padding: 1.5em 1em 0 1em;
+                    }
+                    .product__shipping__desc .half-row span {
+                        margin: 0;
+                        margin-left: 1em;
+                        width: 100%;
+                    }
+                    .product__shipping__desc .half-row span:last-of-type {
+                        margin-left: 0;
+                    }
+                    .product__shipping__desc .half-row input {
+                        margin-top: -.3em;
+                        width: 6%;
+                    }
+                    .product__shipping__desc .half-row span:first-of-type {
+                        margin-top: .4em;
+                    }
+                    .product__shipping__desc .half-row:last-of-type input {
+                        margin: 0;
+                        margin-right: 0.6em;
+                        margin-top: -.3em;
+                        width: 79%;
+                    }
+                    .product__shipping__desc .half-row:last-of-type span:first-of-type {
+                        width: 100%;
+                        padding: 0;
+                        font-size: 1.7em;
+                        margin-left: 0;
+                        margin-top: 0.7em;
+                    }
+                    section:nth-of-type(2n) .container .container__main .btn__container {
+                        margin-top: 1em;
+                    }
+                    .container__main__content .half-row input,
+                    .container__main__content input:last-of-type,
+                    select {
+                        padding: 0.7em;
+                        height: 2.5em;
+                        width: 94%;
+                    }
+                    .address {
+                        width: 95%;
+                    }
+                    .address input {
+                        width: 100% !important;
+                    }
+                    /*----------------------------------------------*/
+                    /*----------------------------------------------*/
+                    /*---------------Third container ---------------*/
+                    /*----------------------------------------------*/
+                    section:last-of-type .container__main {
+                        margin-top: 2em;
+                    }
+                    section:last-of-type .container__main__content form {
+                        padding: 0;
+                    }
+                    section:last-of-type .container__main__content.credit__card {
+                        border: 0;
+                        width: 100%;
+                        //margin: 0;
+                    }
+                    .product__payment {
+                        display: flex;
+                        position: relative;
+                        margin-bottom: 3em !important;
+                    }
+                    .product__payment input {
+                        margin-top: .5em !important;
+                    }
+                    .Payment__radio {
+                        position: absolute;
+                        height: 1em !important;
+                        top: 0;
+                        left: -45%;
+                        width: 300px;
+                        height: 1.3em;
+                    }
+                    .card-number {
+                        margin: auto;
+                    }
+                    .credit__card {
+                        width: 95%;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        -webkit-transform: translate(-50%, 0);
+                        -moz-transform: translate(-50%, 0);
+                        -ms-transform: translate(-50%, 0);
+                        -o-transform: translate(-50%, 0);
+                    }
+                    .credit__card .half-row {
+                        padding: 0 0 1em 0;
+                        margin-top: 2em;
+                    }
+                    .credit__card .product__shipping label span {
+                        margin-left: 2em;
+                        margin-top: 0.5em;
+                    }
+                    .credit__card .product__shipping label span:last-of-type {
+                        line-height: 2em;
+                    }
+                    .card-cvv,
+                    .half-sm-row {
+                        display: flex;
+                    }
+                    .card-expiry,
+                    .card-cvv {
+                        flex: 1;
+                        justify-content: center;
+                    }
+                    .card-expiry input[type=text] {
+                        width: 29%;
+                    }
+                    .card-expiry input[type=text]:nth-child(2n) {
+                        width: 14%;
+                        margin-left: -2.3em;
+                    }
+                    .card-expiry input[type=text]:last-of-type {
+                        margin-left: -1.9em;
+                        width: 13%;
+                    }
+                    .card-cvv input {
+                        width: 40% !important;
+                    }
+                    .Card-no {
+                        margin: -1em 3.3em !important;
+                        width: 80% !important;
+                        height: 3em !important;
+                    }
+                    .product__paypal__shipping {
+                        border: 0;
+                        width: 97%;
+                        padding: 0;
+                        flex-direction: row;
+                    }
+                    .product__paypal__shipping label span:last-of-type {
+                        line-height: 1.7em;
+                        color: #000000be;
+                    }
+                    .product__paypal__shipping img {
+                        width: 30%;
+                        height: auto;
+                    }
+                    .product__payment input {
+                        margin-left: 1em;
+                        margin-right: 0.5em;
+                    }
+                    .product__paypal__shipping label {
+                        margin-left: -.8em;
+                    }
+                    section:last-of-type .product__payment {
+                        margin-bottom: 0 !important;
+                    }
+                    section:last-of-type .container .container__main .btn__container {
+                        margin-top: 0;
+                    }
+                }
+                /*----------------------------------------------*/
+                /*----------------------For small phone screens-----------------*/
+                /*----------------------------------------------*/
+                
+                @media only screen and (max-width: 400px) {
+                    html {
+                        font-size: 5px;
+                        width: 104%;
+                    }
+                    body {
+                        overflow-x: hidden;
+                    }
+                    section {
+                        margin-top: 1.5em;
+                    }
+                    .container__sub {
+                        margin-top: 5em;
+                    }
+                    /*----------------------------------------------*/
+                    /*---------------First container ---------------*/
+                    /*----------------------------------------------*/
+                    .product__no * {
+                        font-size: 1.7em;
+                    }
+                    .container__sub--container input {
+                        padding: 0;
+                    }
+                    /*----------------------------------------------*/
+                    /*----------------------------------------------*/
+                    /*---------------Second container ---------------*/
+                    /*----------------------------------------------*/
+                    .container__main__content .half-row input,
+                    .container__main__content input:last-of-type,
+                    select {
+                        padding: 1em;
+                        height: .3em;
+                        font-size: 2em;
+                    }
+                    select {
+                        height: 2.3em;
+                        margin-left: .7em;
+                    }
+                    .address {
+                        margin-left: 1.3em;
+                    }
+                    input[type=radio] {
+                        height: auto;
+                        width: 5em;
+                    }
+                    .product__shipping__desc .half-row {
+                        width: 25em;
+                        padding: 2em;
+                    }
+                    /*----------------------------------------------*/
+                    /*----------------------------------------------*/
+                    /*---------------Third container ---------------*/
+                    /*----------------------------------------------*/
+                    section:last-of-type .container__main__content.credit__card {
+                        padding-top: 2em;
+                    }
+                    .Payment__radio {
+                        margin-left: 1.7em !important;
+                    }
+                    .half-row.group {
+                        margin-top: 2em;
+                    }
+                    .card-expiry input[type=text]:nth-child(2n) {
+                        margin-left: -2em;
+                        height: 2.2em;
+                    }
+                    .card-expiry input[type=text]:last-child {
+                        height: auto;
+                        margin-left: -2.3em;
+                        width: 16%;
+                    }
+                    .Card-no {
+                        padding: 0 0 0 1em !important;
+                        //height: 2.2em !important;
+                        font-size: 1.4em !important;
+                        width: 70% !important;
+                        margin-left: 6em !important;
+                    }
+                    .product__payment label {
+                        width: 100%;
+                        margin-left: 5em;
+                    }
+                    .product__paypal__shipping label {
+                        margin: 0.2em;
+                    }
+                }
